@@ -1,5 +1,68 @@
 @charset "utf-8";
 /* CSS Document */
 *{
-	font-family: Arial;
+	color: white;
+	font-family: 'Roboto', sans-serif;
 }
+
+html, body{
+	background-color: #111;
+}
+
+.logo{
+	color: #e5c100;
+	margin-top: 0px;
+}
+
+.profilepic>img{
+	border-radius: 90px;
+}
+
+.menu-tab{
+	color: #FAFAFA;
+}
+
+.radio-text{
+	font-size: 30px
+}
+
+.jumbo-profile{
+	height: 384px;
+}
+
+.jumbo-intro{
+	height: 384px;
+}
+
+.jumbo-tron
+{
+	visibility: hidden;
+	position: absolute;	
+}
+
+.jumbotron{
+	background-color: #222;
+}
+
+.summoner-input{
+	background: none;
+	border: 1px solid #e5c100;
+	color: #FAFAFA;
+	font-size: 35px;
+	text-align: center;
+	padding: 30px;
+	outline: none;
+}
+
+.summoner-input:focus{
+	outline: none;
+}
+
+.champions>img{
+	border-radius: 10px;
+}
+
+
+
+
+

@@ -16,6 +16,8 @@ $(document).ready(function(){
 			.done(function(response){
 				//ESTÁ VACIO
 				if(response == "ErrorVacio"){
+					document.getElementById('jumbo-tron').style.visibility="hidden";
+					document.getElementById('jumbo-tron').style.position="absolute";
 					alert("Se debe ingresar un Summoner Name");
 				}else if (response == "ErrorRequest"){
 					document.getElementById('Error').innerHTML ="'" + summonerName + "'"+ " no existe en el servidor seleccionado.";
@@ -31,23 +33,34 @@ $(document).ready(function(){
 					document.getElementById('Worst2').innerHTML = "";
 					document.getElementById('Worst3').innerHTML = "";
 					document.getElementById('Informacion').innerHTML = "";
+					document.getElementById('jumbo-tron').style.visibility="visible";
+					document.getElementById('jumbo-tron').style.position="relative";					
 				}else if (response[0] == "2"){
 				//UNRANKED
 					var aux = response.split("~");
 					document.getElementById('SN').innerHTML="Summoner Name: " + aux[1];
 					document.getElementById('SummonerLvl').innerHTML="Summoner Level: " + aux[2];
-					document.getElementById('Division').innerHTML="Division: " + aux[3];
-					document.getElementById('Best1').innerHTML="Best1: " + aux[4];
-					document.getElementById('Best2').innerHTML="Best2: " + aux[5];
-					document.getElementById('Best3').innerHTML="Best3: " + aux[6];
-					document.getElementById('Worst1').innerHTML="Worst1: " + aux[7];
-					document.getElementById('Worst2').innerHTML="Worst2: " + aux[8];
-					document.getElementById('Worst3').innerHTML="Worst3: " + aux[9];
+					var division = '<img src="img/Divisions/' + aux[3] + '.png">'
+					document.getElementById('Division').innerHTML=division + "Division: " + aux[3];
+					var best1 = '<img src="img/Champions/' + aux[4] + '.jpg">'
+					document.getElementById('Best1').innerHTML= best1;
+					var best2 = '<img src="img/Champions/' + aux[5] + '.jpg">'
+					document.getElementById('Best2').innerHTML= best2;
+					var best3 = '<img src="img/Champions/' + aux[6] + '.jpg">'
+					document.getElementById('Best3').innerHTML= best3;
+					var worst1 = '<img src="img/Champions/' + aux[7] + '.jpg">'
+					document.getElementById('Worst1').innerHTML= worst1;
+					var worst2 = '<img src="img/Champions/' + aux[8] + '.jpg">'
+					document.getElementById('Worst2').innerHTML= worst2;
+					var worst3 = '<img src="img/Champions/' + aux[9] + '.jpg">'
+					document.getElementById('Worst3').innerHTML= worst3;
 
 					document.getElementById('LeaguePoints').innerHTML="";
 					document.getElementById('League').innerHTML="";
 					document.getElementById('Informacion').innerHTML= "";
 					document.getElementById('Error').innerHTML = "";
+					document.getElementById('jumbo-tron').style.visibility="visible";
+					document.getElementById('jumbo-tron').style.position="relative";
 
 				}
 				//NO ESTÁ VACIO
@@ -56,15 +69,19 @@ $(document).ready(function(){
 					document.getElementById('SN').innerHTML= "Summoner Name: " + aux[0];
 					document.getElementById('League').innerHTML = "League: " + aux[2];
 					document.getElementById('SummonerLvl').innerHTML = "Summoner Level: " + aux[1];
-					document.getElementById('Division').innerHTML = "Division: " + aux[3];
+					var division = '<img src="img/Divisions/' + aux[3] + '.png">'
+					document.getElementById('Division').innerHTML=division + "Division: " + aux[3];
 					document.getElementById('LeaguePoints').innerHTML = "League Points: " + aux[4];
-					document.getElementById('Best1').innerHTML = "Best1: " + aux[5];
+					var best1 = '<img src="img/Champions/' + aux[5] + '.jpg">'
+					document.getElementById('Best1').innerHTML= best1;
 					document.getElementById('Best2').innerHTML = "Best2: " + aux[6];
 					document.getElementById('Best3').innerHTML = "Best3: " + aux[7];
 					document.getElementById('Worst1').innerHTML = "Worst1: " + aux[8];
 					document.getElementById('Worst2').innerHTML = "Worst2: " + aux[9];
 					document.getElementById('Worst3').innerHTML = "Worst3: " + aux[10];
 					document.getElementById('Error').innerHTML = "";
+					document.getElementById('jumbo-tron').style.visibility="visible";
+					document.getElementById('jumbo-tron').style.position="relative";
 				}
 				console.log(response);
 			})
