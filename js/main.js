@@ -22,6 +22,8 @@ $(document).ready(function(){
 				}else if (response == "ErrorRequest"){
 					document.getElementById('Error').innerHTML ="'" + summonerName + "'"+ " no existe en el servidor seleccionado.";
 					document.getElementById('SN').innerHTML = "";
+					document.getElementById("The-best").innerHTML = "";
+					document.getElementById("The-worst").innerHTML = "";
 					document.getElementById('League').innerHTML = "";
 					document.getElementById('SummonerLvl').innerHTML = "";
 					document.getElementById('Division').innerHTML = "";
@@ -42,6 +44,7 @@ $(document).ready(function(){
 					document.getElementById('SummonerLvl').innerHTML="Summoner Level: " + aux[2];
 					var division = '<img src="img/Divisions/' + aux[3] + '.png">'
 					document.getElementById('Division').innerHTML=division + "Division: " + aux[3];
+					document.getElementById("The-best").innerHTML = "The Best of the League";
 					var best1 = '<img src="img/Champions/' + aux[4] + '.jpg">'
 					document.getElementById('Best1').innerHTML= best1;
 					var best2 = '<img src="img/Champions/' + aux[5] + '.jpg">'
@@ -49,6 +52,7 @@ $(document).ready(function(){
 					var best3 = '<img src="img/Champions/' + aux[6] + '.jpg">'
 					document.getElementById('Best3').innerHTML= best3;
 					var worst1 = '<img src="img/Champions/' + aux[7] + '.jpg">'
+					document.getElementById("The-worst").innerHTML = "The Worst of the League";
 					document.getElementById('Worst1').innerHTML= worst1;
 					var worst2 = '<img src="img/Champions/' + aux[8] + '.jpg">'
 					document.getElementById('Worst2').innerHTML= worst2;
@@ -72,13 +76,21 @@ $(document).ready(function(){
 					var division = '<img src="img/Divisions/' + aux[3] + '.png">'
 					document.getElementById('Division').innerHTML=division + "Division: " + aux[3];
 					document.getElementById('LeaguePoints').innerHTML = "League Points: " + aux[4];
+					document.getElementById("The-best").innerHTML = "The Best of the League";
 					var best1 = '<img src="img/Champions/' + aux[5] + '.jpg">'
 					document.getElementById('Best1').innerHTML= best1;
-					document.getElementById('Best2').innerHTML = "Best2: " + aux[6];
-					document.getElementById('Best3').innerHTML = "Best3: " + aux[7];
-					document.getElementById('Worst1').innerHTML = "Worst1: " + aux[8];
-					document.getElementById('Worst2').innerHTML = "Worst2: " + aux[9];
-					document.getElementById('Worst3').innerHTML = "Worst3: " + aux[10];
+					var best2 = '<img src="img/Champions/' + aux[6] + '.jpg">'
+					document.getElementById('Best2').innerHTML= best2;
+					var best3 = '<img src="img/Champions/' + aux[7] + '.jpg">'
+					document.getElementById('Best3').innerHTML= best3;
+					var worst1 = '<img src="img/Champions/' + aux[8] + '.jpg">'
+					document.getElementById("The-worst").innerHTML = "The Worst of the League";
+					document.getElementById('Worst1').innerHTML= worst1;
+					var worst2 = '<img src="img/Champions/' + aux[9] + '.jpg">'
+					document.getElementById('Worst2').innerHTML= worst2;
+					var worst3 = '<img src="img/Champions/' + aux[10] + '.jpg">'
+					document.getElementById('Worst3').innerHTML= worst3;
+					
 					document.getElementById('Error').innerHTML = "";
 					document.getElementById('jumbo-tron').style.visibility="visible";
 					document.getElementById('jumbo-tron').style.position="relative";

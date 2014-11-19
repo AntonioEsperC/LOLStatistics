@@ -9,6 +9,14 @@ html, body{
 	background-color: #111;
 }
 
+html { 
+  background: url(img/Logo/bg.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 .logo{
 	color: #e5c100;
 	margin-top: 0px;
@@ -44,6 +52,11 @@ html, body{
 	background-color: #222;
 }
 
+.jumbotron-inverse{
+	background-color: #414141;
+	color: #222;
+}
+
 .summoner-input{
 	background: none;
 	border: 1px solid #e5c100;
@@ -60,6 +73,11 @@ html, body{
 
 .champions>img{
 	border-radius: 10px;
+}
+
+.bg-title{
+	font-size: 36px;
+	padding: 25px;
 }
 
 

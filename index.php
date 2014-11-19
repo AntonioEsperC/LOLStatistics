@@ -32,6 +32,11 @@
 			        <p class="lead"><br>Login with your facebook user and search for your League Of Legends summoner name. <br>Obtain the best and worst champion selection of your division so you can improve.</p>
 			    </div>	
 			</div>	
+			<div class="col-lg-12">	
+				<div class="jumbotron jumbotron-inverse">
+					<p>Parte de rafa</p>
+				</div>
+			</div>
 	
 			<div class="col-lg-12">	
 				<div class="jumbotron ">
@@ -57,11 +62,11 @@
 					<p id="Division"></p>
 					<p id="LeaguePoints"></p>
 
-
+					<div id="The-best" class="bg-title"></div>
 					<div class="col-lg-4"><p class="champions" id="Best1"></p></div>
 					<div class="col-lg-4"><p class="champions" id="Best2"></p></div>
 					<div class="col-lg-4"><p class="champions" id="Best3"></p></div>
-					
+					<div id="The-worst" class="bg-title"></div>
 					<div class="col-lg-4"><p class="champions"  id="Worst1"></p></div>
 					<div class="col-lg-4"><p class="champions"  id="Worst2"></p></div>
 					<div class="col-lg-4"><p class="champions"  id="Worst3"></p></div>
