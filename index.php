@@ -34,7 +34,16 @@
 			</div>	
 			<div class="col-lg-12">	
 				<div class="jumbotron jumbotron-inverse">
-					<p>Parte de rafa</p>
+					<p >This App will help you to reach the next division faster, steps:</p>
+					
+  						<li>Sign in with your facebook account in order to personalize the App</li>
+  						<li>Enter your summoner name</li>
+  						<li>Select server (LAN or NA)</li>
+  						<li>Click on search summoner</li>
+  						<li>Scroll down and see the best or worst champions from your division</li>
+  						<li>Play with the best champions</li>
+  						<li>Share</li>
+				
 				</div>
 			</div>
 	
@@ -62,22 +71,44 @@
 					<p id="Division"></p>
 					<p id="LeaguePoints"></p>
 
-					<div id="The-best" class="bg-title"></div>
-					<div class="col-lg-4"><p class="champions" id="Best1"></p></div>
-					<div class="col-lg-4"><p class="champions" id="Best2"></p></div>
-					<div class="col-lg-4"><p class="champions" id="Best3"></p></div>
-					<div id="The-worst" class="bg-title"></div>
-					<div class="col-lg-4"><p class="champions"  id="Worst1"></p></div>
-					<div class="col-lg-4"><p class="champions"  id="Worst2"></p></div>
-					<div class="col-lg-4"><p class="champions"  id="Worst3"></p></div>
+					<div id = "switch" name="switch" value="switch" clas="switch">
+						<div class="register-switch">
+						      <input type="radio" name="sex" value="F" id="noCheck" class="register-switch-input" onclick="javascript:yesnoCheck();" checked>
+						      <label for="noCheck" class="register-switch-label">BEST</label>
+						      <input type="radio" name="sex" value="M" id="yesCheck" class="register-switch-input" onclick="javascript:yesnoCheck();">
+						      <label for="yesCheck" class="register-switch-label">WORST</label>
+						 </div>
 
+
+	 					<div id="ifYes" style="display:none">
+						<p id="The-worst"></p>
+						<div class="col-lg-4"><p class="champions"  id="Worst1"></p></div>
+						<div class="col-lg-4"><p class="champions"  id="Worst2"></p></div>
+						<div class="col-lg-4"><p class="champions"  id="Worst3"></p></div>
+						</div>
+
+						<div id="ifNo">
+						<p id="The-best"></p>
+						<div class="col-lg-4"><p class="champions" id="Best1"></p></div>
+						<div class="col-lg-4"><p class="champions" id="Best2"></p></div>
+						<div class="col-lg-4"><p class="champions" id="Best3"></p></div>
+						</div>
+						
+					</div>
+
+			
 					<p id="Error"></p>
 
 					<p id="Informacion"></p>
 					<p id="destroy"></p>
 
+					<p id="Error"></p>
+
+					<p id="Informacion"></p>
+					<p id="destroy"></p>
 			</div>
 		</div>
+
 
 	<?php
 		include("footer.php");

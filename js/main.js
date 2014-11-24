@@ -36,7 +36,9 @@ $(document).ready(function(){
 					document.getElementById('Worst3').innerHTML = "";
 					document.getElementById('Informacion').innerHTML = "";
 					document.getElementById('jumbo-tron').style.visibility="visible";
-					document.getElementById('jumbo-tron').style.position="relative";					
+					document.getElementById('jumbo-tron').style.position="relative";
+					document.getElementById('switch').style.display = 'none';
+
 				}else if (response[0] == "2"){
 				//UNRANKED
 					var aux = response.split("~");
@@ -66,6 +68,9 @@ $(document).ready(function(){
 					document.getElementById('jumbo-tron').style.visibility="visible";
 					document.getElementById('jumbo-tron').style.position="relative";
 
+					document.getElementById('switch').style.display = 'inline';
+				
+
 				}
 				//NO ESTÁ VACIO
 				else{
@@ -94,6 +99,7 @@ $(document).ready(function(){
 					document.getElementById('Error').innerHTML = "";
 					document.getElementById('jumbo-tron').style.visibility="visible";
 					document.getElementById('jumbo-tron').style.position="relative";
+					document.getElementById('switch').style.display = 'inline';
 				}
 				console.log(response);
 			})
@@ -217,4 +223,19 @@ function kill_session() {
     xmlhttp.send();
 
     document.getElementById("destroy").innerHTML=xmlhttp.responseText; 
+}
+
+// switch best worst
+
+function yesnoCheck() {
+    if (document.getElementById('yesCheck').checked) {
+        document.getElementById('ifYes').style.display = 'block';
+    }
+    else document.getElementById('ifYes').style.display = 'none';
+
+    if (document.getElementById('noCheck').checked) {
+        document.getElementById('ifNo').style.display = 'block';
+    }
+    else document.getElementById('ifNo').style.display = 'none';
+
 }
